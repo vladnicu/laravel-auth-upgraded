@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Cook\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
