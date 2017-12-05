@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Cook\User::class,
+            'model' => Cook\Models\User::class,
         ],
 
         // 'users' => [

@@ -2,7 +2,7 @@
 
 namespace Cook\Http\Controllers\Auth;
 
-use Cook\User;
+use Cook\Models\User;
 use Cook\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;

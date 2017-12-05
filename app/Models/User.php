@@ -1,6 +1,6 @@
 <?php
 
-namespace Cook;
+namespace Cook\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
