@@ -3,7 +3,9 @@
 namespace Cook\Http\Controllers\Auth;
 
 use Cook\Http\Controllers\Controller;
+
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Auth\Events\PasswordReset;
 
 class ResetPasswordController extends Controller
 {
@@ -25,7 +27,7 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
@@ -36,4 +38,46 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+    
+    
+    /**
+     *
+     * !!!!!!!!!!!!!!!!!!!!! this method is overrided
+     *
+     * Reset the given user's password.
+     *
+     * @param  \Illuminate\Contracts\Auth\CanResetPassword  $user
+     * @param  string  $password
+     * @return void
+     */
+    protected function resetPassword($user, $password)
+    {
+        $user->password = bcrypt($password);
+
+        $user->setRememberToken(str_random(60));
+
+        $user->save();
+
+        event(new PasswordReset($user));
+
+        if($user->active){
+            $this->guard()->login($user);
+        }
+    }
+    
+    /**
+     * 
+     * !!!!!!!!!!!!!!!!!!!!! this method is overrided
+     *
+     * Get the response for a successful password reset.
+     *
+     * @param  string  $response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    protected function sendResetResponse($response)
+    {
+        return redirect($this->redirectPath())
+            ->withSuccess('Your password has been reset successfully');
+    }
+    
 }

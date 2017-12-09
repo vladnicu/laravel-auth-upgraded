@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Cook\Events\Event' => [
-            'Cook\Listeners\EventListener',
+        'Cook\Events\Auth\UserRequestedActivationEmail' => [
+            'Cook\Listeners\Auth\SendActivationEmail',
         ],
     ];
 
