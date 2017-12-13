@@ -5,15 +5,15 @@ namespace Cook\Http\Controllers\Profile;
 use Illuminate\Http\Request;
 use Cook\Http\Controllers\Controller;
 
-class ProfileController extends Controller
+class DashboardController extends Controller
 {
       /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
-    public function profile()
+    public function dashboard()
     {
-        return view('profile.profile');
+        return view('profile.dashboard');
     }
 }

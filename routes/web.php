@@ -23,6 +23,6 @@ Route::get('/auth/activate', 'Auth\ActivationController@activate')->name('auth.a
 Route::get('/auth/activate/resend', 'Auth\ActivationResendController@showResendForm')->name('auth.activate.resend');
 Route::post('/auth/activate/resend', 'Auth\ActivationResendController@resend');
 
-Route::get('/profile', 'Profile\ProfileController@profile')->name('profile');
+Route::get('/dashboard', 'Profile\DashboardController@dashboard')->name('dashboard');
 
 Route::get('/home', 'HomeController@index')->name('home');
