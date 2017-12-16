@@ -25,4 +25,7 @@ Route::post('/auth/activate/resend', 'Auth\ActivationResendController@resend');
 
 Route::get('/dashboard', 'Profile\DashboardController@dashboard')->name('dashboard');
 
+Route::get('/profile/edit', 'Profile\ProfileEditController@showEditForm')->name('profile.edit');
+Route::post('/profile/edit', 'Profile\ProfileEditController@edit');
+
 Route::get('/home', 'HomeController@index')->name('home');
