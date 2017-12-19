@@ -11,8 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (\Illuminate\Http\Request $request) {
+    
+    $user= $request->user();
+    dd($user->hasPermissionTo('edit posts'));
+    //return view('welcome');
     
 });
 

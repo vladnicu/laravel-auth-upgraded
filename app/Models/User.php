@@ -2,13 +2,14 @@
 
 namespace Cook\Models;
 
+use Cook\Permissions\HasPermissionsTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Builder;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasPermissionsTrait;
 
     /**
      * The attributes that are mass assignable.

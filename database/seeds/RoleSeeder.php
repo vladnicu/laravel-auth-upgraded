@@ -1,9 +1,10 @@
 <?php
 
+use Cook\Models\Role;
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class RoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,10 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users_roles')->insert([
-            'user_id' => '2',
-            'role_id' => '1',
-            
+        Role::create([
+            'name' =>'User'
         ]);
     }
 }
