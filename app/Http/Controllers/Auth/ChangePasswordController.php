@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Cook\Http\Controllers\Controller;
 use Cook\Rules\MatchCurrentPassword;
 
+use Cook\Events\Auth\UserChangedPassword;
+
 class ChangePasswordController extends Controller
 {
     /**
@@ -40,6 +42,9 @@ class ChangePasswordController extends Controller
     
     public function change(Request $request){
         $this->validateRequest($request);
+        
+        //trigger activation event
+        event(new UserChangedPassword(Auth::user()));
         
         Auth::user()->update([
             'password' => bcrypt($request->password_new),

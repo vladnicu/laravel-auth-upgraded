@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'Cook\Events\Auth\UserRequestedActivationEmail' => [
             'Cook\Listeners\Auth\SendActivationEmail',
         ],
+        'Cook\Events\Auth\UserChangedPassword' => [
+            'Cook\Listeners\Auth\SendChangedPasswordEmail',
+        ],
     ];
 
     /**

@@ -13,9 +13,7 @@
 
 Route::get('/', function (\Illuminate\Http\Request $request) {
     
-    $user= $request->user();
-    dd($user->hasPermissionTo('edit posts'));
-    //return view('welcome');
+    return view('welcome');
     
 });
 
@@ -25,6 +23,9 @@ Route::get('/auth/activate', 'Auth\ActivationController@activate')->name('auth.a
 
 Route::get('/auth/activate/resend', 'Auth\ActivationResendController@showResendForm')->name('auth.activate.resend');
 Route::post('/auth/activate/resend', 'Auth\ActivationResendController@resend');
+
+Route::get('/password/change', 'Auth\ChangePasswordController@showChangePasswordForm')->name('password.change');
+Route::post('/password/change', 'Auth\ChangePasswordController@change');
 
 Route::get('/dashboard', 'Profile\DashboardController@dashboard')->name('dashboard');
 
