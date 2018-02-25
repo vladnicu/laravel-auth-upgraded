@@ -1,10 +1,10 @@
 <?php
 
-namespace Cook\Listeners\Auth;
+namespace App\Listeners\Auth;
 
 use Mail;
-use Cook\Mail\Auth\ChangedPasswordEmail;
-use Cook\Events\Auth\UserChangedPassword;
+use App\Mail\Auth\ChangedPasswordEmail;
+use App\Events\Auth\UserChangedPassword;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;

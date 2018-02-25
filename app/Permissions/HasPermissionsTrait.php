@@ -1,8 +1,8 @@
 <?php 
 
-namespace Cook\Permissions;
+namespace App\Permissions;
 
-use Cook\Models\{Role, Permission};
+use App\Models\{Role, Permission};
     
 trait HasPermissionsTrait {
     //

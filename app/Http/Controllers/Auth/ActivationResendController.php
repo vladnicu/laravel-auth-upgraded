@@ -1,12 +1,12 @@
 <?php
 
-namespace Cook\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Cook\Models\User;
-use Cook\Events\Auth\UserRequestedActivationEmail;
+use App\Models\User;
+use App\Events\Auth\UserRequestedActivationEmail;
 
 use Illuminate\Http\Request;
-use Cook\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 class ActivationResendController extends Controller
 {

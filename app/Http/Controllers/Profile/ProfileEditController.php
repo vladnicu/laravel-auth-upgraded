@@ -1,12 +1,12 @@
 <?php
 
-namespace Cook\Http\Controllers\Profile;
+namespace App\Http\Controllers\Profile;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-use Cook\Http\Controllers\Controller;
-use Cook\Models\User;
+use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class ProfileEditController extends Controller
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Cook\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Cook\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;

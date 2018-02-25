@@ -1,14 +1,14 @@
 <?php
 
-namespace Cook\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-use Cook\Http\Controllers\Controller;
-use Cook\Rules\MatchCurrentPassword;
+use App\Http\Controllers\Controller;
+use App\Rules\MatchCurrentPassword;
 
-use Cook\Events\Auth\UserChangedPassword;
+use App\Events\Auth\UserChangedPassword;
 
 class ChangePasswordController extends Controller
 {

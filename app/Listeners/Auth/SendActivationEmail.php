@@ -1,10 +1,10 @@
 <?php
 
-namespace Cook\Listeners\Auth;
+namespace App\Listeners\Auth;
 
 use Mail;
-use Cook\Mail\Auth\ActivationEmail;
-use Cook\Events\Auth\UserRequestedActivationEmail;
+use App\Mail\Auth\ActivationEmail;
+use App\Events\Auth\UserRequestedActivationEmail;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;

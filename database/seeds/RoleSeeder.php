@@ -1,6 +1,6 @@
 <?php
 
-use Cook\Models\Role;
+use App\Models\Role;
 
 use Illuminate\Database\Seeder;
 

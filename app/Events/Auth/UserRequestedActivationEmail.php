@@ -1,8 +1,8 @@
 <?php
 
-namespace Cook\Events\Auth;
+namespace App\Events\Auth;
 
-use Cook\Models\User;
+use App\Models\User;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 

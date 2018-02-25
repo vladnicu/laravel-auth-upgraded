@@ -1,8 +1,8 @@
 <?php
 
-namespace Cook\Mail\Auth;
+namespace App\Mail\Auth;
 
-use Cook\Models\User;
+use App\Models\User;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;

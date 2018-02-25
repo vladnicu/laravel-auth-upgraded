@@ -1,8 +1,8 @@
 <?php
 
-namespace Cook\Models;
+namespace App\Models;
 
-use Cook\Permissions\HasPermissionsTrait;
+use App\Permissions\HasPermissionsTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Builder;

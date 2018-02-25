@@ -1,6 +1,6 @@
 <?php
 
-namespace Cook\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,11 +13,11 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Cook\Events\Auth\UserRequestedActivationEmail' => [
-            'Cook\Listeners\Auth\SendActivationEmail',
+        'App\Events\Auth\UserRequestedActivationEmail' => [
+            'App\Listeners\Auth\SendActivationEmail',
         ],
-        'Cook\Events\Auth\UserChangedPassword' => [
-            'Cook\Listeners\Auth\SendChangedPasswordEmail',
+        'App\Events\Auth\UserChangedPassword' => [
+            'App\Listeners\Auth\SendChangedPasswordEmail',
         ],
     ];
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Cook\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
 use Auth;
-use Cook\Models\User;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Cook\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 class ActivationController extends Controller
 {
