@@ -10,6 +10,7 @@
 |Makes us of Laravel Mix to compile assets|
 
  Laravel-Auth-Upgraded Features  |
+ | :------------ |
 |User Registration with email verification|
 |Restrict User Email Activation Attempts|
 |User Roles|
