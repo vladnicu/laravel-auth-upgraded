@@ -16,12 +16,27 @@ trait HasPermissionsTrait {
         } 
         //get permission models
         //saveMany
+        
         dd($permissions);
     }
     public function hasPermissionTo ($permission) 
     {
         return $this->hasPermissionThroughRole($permission) || $this->hasPermission($permission);
         
+    }
+    
+    public function withdrawPermissionTo (...$permissions)
+    {
+        $permisssions = $this->getAllPermissions(array_flatten($permissions));
+        $this->permissions()->detach($permissions);
+        
+        return $this;
+    }
+    public function updatePermission (...$permissions) 
+    {
+        $this->permissions()->detach();
+        
+        return $this->givePermissionTo($permissions);
     }
     
     protected function hasPermissionThroughRole($permission)

@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function (\Illuminate\Http\Request $request) {
-    
+    //$user = $request->user();
+    //$user->updatePermission('delete posts');
     return view('welcome');
     
 });
@@ -33,3 +34,10 @@ Route::get('/profile/edit', 'Profile\ProfileEditController@showEditForm')->name(
 Route::post('/profile/edit', 'Profile\ProfileEditController@edit');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'role:admin'], function() {
+    Route::get('/admin', function() {
+    return 'Admin panel';
+});
+});
+
